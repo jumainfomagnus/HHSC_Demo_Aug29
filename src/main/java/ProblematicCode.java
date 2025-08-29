@@ -41,10 +41,10 @@ public class ProblematicCode {
                 "root", 
                 DATABASE_PASSWORD);
             
-            String query = "SELECT * FROM users WHERE username = '" + username + "'";
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            
+            String query = "SELECT * FROM users WHERE username = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
             return rs.next();
             
         } catch (Exception e) {
