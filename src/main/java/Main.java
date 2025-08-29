@@ -26,13 +26,8 @@ public class Main {
             System.err.println("Error: Invalid username format. " +
                              "Username must be 3-20 characters and contain only letters, numbers, and underscores.");
             return;
-        // Add validation for email format
-        if (!isValidEmail(email)) {
-            System.err.println("Error: Invalid email format.");
-            return;
         }
-        }
-        
+
         String query = "SELECT username, email FROM users WHERE username = ?";
         
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
