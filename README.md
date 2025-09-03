@@ -1,7 +1,7 @@
-# HHSC Demo Application - User Management System
+# Fedex Demo Application - User Management System
 
 ## Overview
-This is a Java-based user management application that demonstrates database connectivity and user validation for HHSC (Health and Human Services Commission) requirements.
+This is a Java-based user management application that demonstrates database connectivity and user validation for Fedex requirements.
 
 ## Features
 - Database connectivity using JDBC
