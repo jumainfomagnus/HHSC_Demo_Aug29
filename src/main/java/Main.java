@@ -1,4 +1,3 @@
-import java.sql.*;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -40,12 +39,7 @@ public class Main {
             
             pstmt.setString(1, username);
             
-            try (ResultSet rs = pstmt.executeQuery()) {
-                boolean userFound = false;
-                while (rs.next()) {
-                    userFound = true;
-                    System.out.println("Username: " + rs.getString("username"));
-                    System.out.println("Email: " + rs.getString("email"));
+
                 }
                 
                 if (!userFound) {
